@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Prompt', sans-serif;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(211, 211, 211, 0.747);
+}
+
+button {
+    cursor: pointer;
+}
+
+.acao button:hover {
+    transform: scale(1.3);
+}
+
+.container {
+    width: 90%;
+    height: 85%;
+    border: 0.5px solid rgba(77, 76, 76, 0.342);
+    padding: 20px;
+    border-radius: 15px;
+    background-color: white;
+    box-shadow: 0px 0px 4px 0px rgb(57, 121, 158);
+}
+
+.header{
+    justify-content: space-between;
+    display: flex;  
+    margin: 10px 5px;
+}
+
+.header span{
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.header button{
+    border-radius: 7px;
+    padding: 5px 25px 5px 25px;
+    margin-bottom: 10px;
+    font-size: 1em;
+    border: 2px solid rgb(66, 140, 184);
+    color: rgb(66, 140, 184);
+    font-weight: bold;
+}
+
+.header button:hover{
+    background-color:rgb(66, 140, 184);
+    color: white;
+}
+
+.tableContainer{
+    width: auto;
+    height: inherit;
+    overflow: auto;
+}
+
+.tableContainer::-webkit-scrollbar {
+    width: 12px;
+    background-color: whitesmoke; 
+}
+  
+.tableContainer::-webkit-scrollbar-thumb {
+    border-radius: 10px;    
+    background-color: darkgray; 
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    word-break: break-all;
+    border-spacing: 10px;
+}
+
+th {
+    background-color: rgba(189, 189, 189, 0.267);
+}
+
+td, th{
+    padding: 10px;
+    border: 1px solid rgba(156, 156, 156, 0.123);
+    max-width: 50px;
+}
+  
+tbody tr td.acao {
+    text-align: center;
+    width: 10%;
+}
+
+.modalContainer{
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    border-radius: 10px;
+    width: 30%;
+    background-color: white;
+}
+
+.modal label {
+    font-size: 14px;
+    width: 100%;
+}
+
+.modal input {
+    outline: none;
+    padding: 5px 10px; 
+    width: 100%;
+    margin-bottom: 20px;
+    border: 2px solid rgb(66, 140, 184);
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+.modal button {
+    border-radius: 15px;
+    padding: 5px 40px 5px 40px;
+    font-size: 1em;
+    border: 2px solid rgb(66, 140, 184);
+    color: rgb(66, 140, 184);
+    font-weight: bold;
+}
+
+.modal button:hover{
+    background-color:rgb(66, 140, 184);
+    color: white;
+}
+
+.active {
+    display: flex;
+}
+  
+.active .modal {
+    animation: modal .4s;
+}
+  
+@keyframes modal {
+    from {
+    opacity: 0;
+    transform: translate3d(0, -60px, 0);
+    }
+    to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+    }
+}
+
+td button {
+    border: none;
+    outline: none;
+    background: transparent;
+  }
+  
+td button i {
+    font-size: 25px;
+}
+  
+td button i:first-child {
+    margin-right: 10px;
+}
